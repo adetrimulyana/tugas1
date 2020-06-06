@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.inc$
+Disallow: /*.css$
+Disallow: /*.swf$
+Disallow: /difatours/
+Disallow: /application/
+Disallow: /assets/
