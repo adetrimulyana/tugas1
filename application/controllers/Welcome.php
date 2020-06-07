@@ -20,7 +20,6 @@ class Welcome extends CI_Controller {
 	{
 		$username=$this->input->post('username');
 		$password=$this->input->post('password');
-		//var_dump(md5($password));
 		$where = array('username'=>$username,
 						'password'=>var_dump(md5($password)
 						));

@@ -7,9 +7,8 @@ class Admin extends CI_Controller {
 	parent :: __construct();
 	$this->load->model('crud');
 	$this->load->library('session');
-	//$this->load->library('m_pdf');
+	// $this->load->library('m_pdf');
 	$this->load->helper('text');
-	var_dump($this->session->userdata); die();
 	if($this->session->userdata('username')=="") { redirect ('welcome');}
 
 }
@@ -580,7 +579,7 @@ class Admin extends CI_Controller {
 // fungsi tour
 	public function logout() {
 		$this->session->unset_userdata('username');
-		$this->session->unset_userdata('hak_akses');
+		// $this->session->unset_userdata('hak_akses');
 		session_destroy();
 		redirect('Welcome');
 	}

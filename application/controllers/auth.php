@@ -28,8 +28,9 @@ class Auth extends CI_Controller {
 				$sess_data['id'] = $sess->id;
 				$sess_data['username'] = $sess->username;
 				//$sess_data['hak_akses'] = $sess->hak_akses;
-				$this->session->set_userdata($sess_data);
-				//var_dump($this->session->userdata); die();
+				// var_dump($sess_data); die();
+				// var_dump($this->session->userdata); die();
+				$this->session->set_userdata($sess_data,'true');
 			}
 			//if ($this->session->userdata('hak_akses')=='1') {
 			redirect('admin');
@@ -61,7 +62,6 @@ class Auth extends CI_Controller {
 				);
  
 			$this->session->set_userdata($data_session);
- 
 			redirect(base_url("user"));
  
 		}else{
